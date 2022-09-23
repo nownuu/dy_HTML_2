@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커피메뉴 받고 가격 출력</title>
+</head>
+<body>
+    <h1>swich문으로 커피 주문</h1>
+    <hr>
+    <script>
+        var price = 0;
+        var coffee = prompt("무슨 커피를 드릴까요","");
+        var cup = prompt("몇 잔을 주문실 건가요?", 0);
+
+        switch(coffee){
+            case "에스프레소" : price = 2000; break;
+            case "카푸치노" : price = 3000; break;
+            case "카페라떼" : price = 3500; break;
+            default : document.write(coffee+"는 없습니다.");
+        }
+
+        //전체 가격
+        var total = price * cup;
+
+        if(total != 0){
+            document.write(coffee+" "+cup+"잔은 총 "+total+"원입니다.")
+        }
+    </script>
+</body>
+</html>

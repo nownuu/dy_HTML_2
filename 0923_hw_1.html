@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw</title>
+</head>
+<body>
+    <h3>난수 10개 생성</h3>
+    <hr>
+    <script>
+        // 1에서 100사이의 난수를 10개 생성 -> 배열에 저장 / 가장 큰 수 출력
+        var plots = new Array();
+        max = 0;
+
+        for(var i = 0; i<10; i++){ //난수 10개 생성
+            var x = Math.random()*100+1;
+            plots[i] = Math.floor(x);
+
+            if(plots[i] > max){
+                max = plots[i];
+            }
+
+            document.write(plots[i]+" ");
+        }
+        document.write("<br><hr>");
+        document.write("최대 : "+max);
+    </script>
+</body>
+</html>

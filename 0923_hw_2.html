@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h3>정수 5개 입력받아 역순으로 출력</h3>
+    <hr>
+    <script>
+    //prompt 함수를 반복 호출하여 5개의 정수를 입력 받아 배열에 저장하고 
+    //입력된 반대의 수서로 출력하는 웹페이지를 작성하시오
+
+    var array = new Array(5);
+
+    i = 0;
+
+    while( i < array.length){
+        tmp = prompt("정수를 입력하세요");
+        if(!isNaN(parseInt(tmp))){
+            array[i++] = tmp;
+        }else{
+            alert("정수를 입력하세요");
+        }
+    }
+    document.write("입력된 수의 배열<br>"+array);
+    document.write("<br><hr>");
+    document.write("역순으로 재정렬된 배열<br>"+array.reverse());
+    </script>
+
+</body>
+</html>
