@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. 이름 문자열이 들어가 있는 배열</title>
+</head>
+<body>
+    <script>
+        document.write("<h1> 문자열 배열 다루기 </h1><hr>");
+        var names = new Array("wonsun", "jaemoonlee", "kitae", "gracehwang");
+        document.write("이름 : ");
+        
+        for(var i = 0; i<names.length; i++){
+            document.write(names[i]+" ");
+        }
+        document.write("<br><br>");
+
+        document.write("가장 긴 이름 : ");
+        var len = names[0].length;
+        var index;
+        for(var i = 0; i<names.length; i++){
+            if(names[i].length > len){
+                len = names[i].length;
+                index = 1;
+            }
+        }
+        document.write(names[index] + " ");
+        document.write("<br><br>");
+
+        document.write("가장 먼저 나오는 이름 : ");
+        var n = names[0];
+        for (var i = 0; i<names.length; i++){
+            if(n > names[i]){
+                n = names[i];
+            }
+        }
+        document.write(n);
+    </script>
+</body>
+</html>
