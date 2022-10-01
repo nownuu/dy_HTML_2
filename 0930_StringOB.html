@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math를 활용한 구구단 연습</title>
+</head>
+<!-- String 객체 : 문자열을 담기 위한 객체
+                주의 = String 객체는 생성되면 수정이 불가능
+                Var hello = new String "hello"
+    ====== String Method LIST ======
+    * charAt() : 특정 위치의 문자를 반환
+    * indexOf()
+    * slice()  
+    * substr()  
+    * toUpperCase() : 소문자를 대문자로 변경
+    * replace(A,B) : A를 B로 변경  
+    * trim()
+    -->
+    <script>
+        function randomInt(){
+            return Math.floor(Math.random()*9)+1;
+        }
+    </script>
+
+<body>
+    <script>
+    document.write("<h1>Math를 활용한 구구단 연습</h1>")
+    document.write("<hr>");
+
+    var quest = randomInt() + " * " + randomInt();
+    var user = prompt(quest + " 값은 얼마입니까?", 0);
+
+    if(user == null){ //user가 취소버튼을 누른 경우
+        document.write("구구단 연습을 종료합니다.");
+
+    } else{
+        var answer = eval(quest);
+
+        if(quest == user){
+            document.write("정답!<br><br>" + quest + "값은 "+ answer+ "입니다.");
+        }else{
+            document.write("오답!<br><br>"+ quest + "값은 "+ answer + "입니다.");
+        }
+    }
+    </script>
+</body>
+</html>
