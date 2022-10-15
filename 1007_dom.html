@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko"
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 객체</title>
+    <script>
+        // 이벤트 발생
+        function change(){
+            var obj = document.getElementById("mySpan");
+
+            obj.style.color = "green";
+            obj.style.fontSize = "30px";
+            obj.style.display = "block";
+            obj.style.width = "6em";
+            obj.style.border = "3px dotted magenta";
+        }
+    </script>
+</head>
+<body>
+    <h3>CSS 스타일 동적 변경</h3>
+    <hr>
+    <!-- id가 p태그에 붙게 되면 전체 설정이된다. -->
+    <p style="color: blue;">이것은 
+        <span id="mySpan" style="color: red;">문장입니다.</span>
+    </p>
+    <!-- onclick = 이벤트 리스너 -->
+    <input type="button" value="스타일 변경" onclick="change()">
+</body>
+</html>
