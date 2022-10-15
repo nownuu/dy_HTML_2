@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko"
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML 활용</title>
+
+    <script>
+        function showhide(){
+            var element = document.getElementsByTagName("span");
+            for(var i =0; i<element.length; i++){
+                var obj = element[i];
+                if(obj.style.visibility == "hidden"){
+                    obj.style.visibility ="visible";
+                } else{
+                    obj.style.visibility ="hidden";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>다음 빈 곳에 숨은 단어?
+    <button onclick="showhide()">show/hide</button>
+    </h3>
+    <hr>
+    <ol>
+        <li>I (<span>love</span>) you.</li>
+        <li>CSS is Cascading (<span>Style</span>) Sheet.</li>
+        <li>응답하라 (<span>1998</span>).</li>
+    </ol>
+</body>
+</html>
