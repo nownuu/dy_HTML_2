@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventObj</title>
+    <!-- 이벤트 객체
+    이벤트가 발생하면 브라우저는 발생한 이벤트에 관련된 다양한 정보들을 담음
+
+        -->
+<body>
+    <h2>이벤트 객체</h2>
+    <hr>
+    <p id="p">마우스를 올려보세요.</p>
+    <button onclick="f(event)">클릭</button>
+
+    <script>
+        function f(e){ //e는 현재 발생한 이벤트 객체
+            alert(e.type); //이벤트 종류 출력
+        }
+        document.getElementById("p").onmouseover = f;
+    </script>
+</body>
+</html>

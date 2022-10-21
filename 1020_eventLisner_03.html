@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명 함수 사용</title>
+    <!-- 익명 함수
+    함수 이름 없이 필요한 곳에 호출 
+    코드가 짧거나 한 곳에서만 사용하는 경우 유용
+    -->
+    <script>
+        var p;
+
+        function init(){ //문서가 완전히 로드 되었을 때 호출
+            p = document.getElementById("p");
+            p.onmouseover = function(){
+                this.style.backgroundColor="orchid";
+            }
+            p.onmouseout = function(){
+                this.style.backgroundColor="white";
+            }
+        }
+
+    </script>
+</head>
+<!-- body에서 시작 -->
+<body onload="init()"> 
+    <h2>DOM 객체의 이벤트 리스너 프로퍼티에 함수 등록 03</h2>
+    <hr>
+    <P id="p">마우스를 올리면 orchid 색으로 변경</P>
+
+</body>
+</html>
