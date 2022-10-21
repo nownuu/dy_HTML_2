@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener() 사용</title>
+    <!-- 
+        동일한 이벤트 리스너에 여러 함수를 중복하여 등록 가능
+        순서대로 호출
+     -->
+    <script>
+        var p;
+
+        function init(){ //문서가 완전히 로드 되었을 때 호출
+            p = document.getElementById("p");
+            p.addEventListener("mouseover", over);
+            p.addEventListener("mouseout", out);
+        }
+        function over(){
+            p.style.backgroundColor="orchid";
+        }
+        function out(){
+            p.style.backgroundColor="white";
+        }
+    </script>
+</head>
+<!-- body에서 시작 -->
+<body onload="init()"> 
+    <h2>DOM 객체의 이벤트 리스너 프로퍼티에 함수 등록 02</h2>
+    <hr>
+    <P id="p">마우스를 올리면 orchid 색으로 변경</P>
+
+</body>
+</html>
