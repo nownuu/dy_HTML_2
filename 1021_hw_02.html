@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3번</title>
+    <script>
+        function pkey(e){
+            if(e.keyCode == 13){
+                var exp = eval(document.querySelector("#exp").value);
+                document.querySelector("#val").value = exp;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>계산기 만들기</h3>
+    <hr>
+    <p>수식을 입력하고 &lt;Enter&gt;을 입력하세요</p>
+    <form>
+        식<input type="text" id="exp" onkeypress="pkey(event)">
+        <br>
+        값<input type="text" id="val">
+    </form>
+</body>
+</html>
