@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단</title>
+</head>
+<script>
+    function randomInt(){
+        return Math.floor(Math.random()*9)+1;
+    }
+</script>
+<body>
+    <script>
+        document.write("<h2>구구단 연습하기</h2> <hr>");
+
+        var quest = randomInt() + "*"+randomInt();
+        var user = prompt(quest+"의 답은 무엇입니까?", 0);
+
+        if(user==null){
+            document.write("구구단 연습을 종료합니다. <br>");
+        } else{
+            var answer = eval(quest);
+
+            if(user==answer){
+                document.write("정답 : "+quest+"의 답은 "+answer+"입니다.<br>");
+            } else{
+                document.write("오류. 다시 시도해주세요.");
+            }
+        }
+    </script>
+</body>
+</html>
