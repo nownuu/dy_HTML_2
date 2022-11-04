@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머</title>
+</head>
+<body>
+    <img id="img" src="./references/image/naver.gif" onmouseover="startTimer(5000)" onmouseout="cancelTimer()">
+    <script>
+        var timerId = null;
+        function startTimer(time){
+            timerId = setTimeout("load('http://www.naver.com')", time);
+            document.getElementById("img").title = "타이머 작동 시작>>";
+        }
+        function cancelTimer(){
+            if(timerId != null){
+                clearTimeout(timerId);
+            }
+        }
+        function load(url){
+            window.location = url;
+        }
+    </script>
+</body>
+</html>
